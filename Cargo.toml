@@ -7,6 +7,9 @@ edition = "2021"
 
 [dependencies]
 egui = "0.22.0"
+eframe = "0.22.0"
+log = { version = "0.4", features = ["std"] }
+env_logger = "0.10.0"
 mars_raw_utils = {path = "mars-raw-utils"}
 sciimg = {path = "mars-raw-utils/sciimg", features = ["rayon"]}
 serde_json = "1.0.64"
