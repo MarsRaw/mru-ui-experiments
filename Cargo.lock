@@ -936,19 +936,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "dng"
-version = "1.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34a96ab7863e0cb6c02dc7babc7603f6147bc21affb483480b5a9ae87e8335be"
-dependencies = [
- "byteorder",
- "derivative",
- "itertools",
- "json",
- "thiserror",
-]
-
-[[package]]
 name = "downcast-rs"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1019,6 +1006,17 @@ dependencies = [
  "smithay-clipboard",
  "webbrowser",
  "winit",
+]
+
+[[package]]
+name = "egui_extras"
+version = "0.22.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9278f4337b526f0d57e5375e5a7340a311fa6ee8f9fcc75721ac50af13face02"
+dependencies = [
+ "egui",
+ "image",
+ "serde",
 ]
 
 [[package]]
@@ -1242,28 +1240,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "futures"
-version = "0.3.28"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23342abe12aba583913b2e62f22225ff9c950774065e4bfb61a19cd9770fec40"
-dependencies = [
- "futures-channel",
- "futures-core",
- "futures-executor",
- "futures-io",
- "futures-sink",
- "futures-task",
- "futures-util",
-]
-
-[[package]]
 name = "futures-channel"
 version = "0.3.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "955518d47e09b25bbebc7a18df10b81f0c766eaf4c4f1cccef2fca5f2a4fb5f2"
 dependencies = [
  "futures-core",
- "futures-sink",
 ]
 
 [[package]]
@@ -1271,17 +1253,6 @@ name = "futures-core"
 version = "0.3.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4bca583b7e26f571124fe5b7561d49cb2868d79116cfa0eefce955557c6fee8c"
-
-[[package]]
-name = "futures-executor"
-version = "0.3.28"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ccecee823288125bd88b4d7f565c9e58e41858e47ab72e8ea2d64e93624386e0"
-dependencies = [
- "futures-core",
- "futures-task",
- "futures-util",
-]
 
 [[package]]
 name = "futures-io"
@@ -1333,7 +1304,6 @@ version = "0.3.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "26b01e40b772d54cf6c6d721c1d1abd0647a0106a12ecaa1c186273392a69533"
 dependencies = [
- "futures-channel",
  "futures-core",
  "futures-io",
  "futures-macro",
@@ -1853,12 +1823,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "json"
-version = "0.12.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "078e285eafdfb6c4b434e0d31e8cfcb5115b651496faca5749b88fafd4f23bfd"
-
-[[package]]
 name = "kernel32-sys"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1983,30 +1947,18 @@ name = "marsrawutils-ui"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "async-trait",
  "bytes",
- "const_format",
- "dng",
  "eframe",
  "egui",
+ "egui_extras",
  "env_logger",
- "futures",
- "futures-util",
- "glob",
  "image",
- "itertools",
- "lazy_static",
  "log",
  "mars_raw_utils",
- "platforms",
- "regex",
- "reqwest",
+ "poll-promise",
  "sciimg",
- "serde_json",
  "tempfile",
  "thiserror",
- "tokio",
- "url",
 ]
 
 [[package]]
@@ -2590,6 +2542,15 @@ dependencies = [
  "fdeflate",
  "flate2",
  "miniz_oxide 0.7.1",
+]
+
+[[package]]
+name = "poll-promise"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fcf2a02372dfae23c9c01267fb296b8a3413bb4e45fbd589c3ac73c6dcfbb305"
+dependencies = [
+ "static_assertions",
 ]
 
 [[package]]

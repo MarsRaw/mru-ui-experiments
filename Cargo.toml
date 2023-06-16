@@ -3,32 +3,17 @@ name = "marsrawutils-ui"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 egui = "0.22.0"
 eframe = "0.22.0"
 log = { version = "0.4", features = ["std"] }
 env_logger = "0.10.0"
-mars_raw_utils = {path = "mars-raw-utils"}
-sciimg = {path = "mars-raw-utils/sciimg", features = ["rayon"]}
-serde_json = "1.0.64"
-const_format = "0.2.14"
-reqwest = { version = "0.11.2", features = ["stream"] }
-platforms = "3.0.0"
-image = "0.24.1"
-lazy_static = "1.4.0"
+mars_raw_utils = { path = "mars-raw-utils" }
+sciimg = { path = "mars-raw-utils/sciimg", features = ["rayon"] }
+image = { version = "0.24", features = ["jpeg", "png"] }
 anyhow = "1.0.65"
 bytes = "1.2.1"
 thiserror = "1.0.37"
-async-trait = "0.1.57"
-tokio = {version="1.21.2", features= ["full"]}
-glob = "0.3.0"
-regex = "1.7.0"
-url = "2.3.1"
 tempfile = "3.5.0"
-futures-util = "0.3.28"
-itertools = "0.10.5"
-futures = "0.3.28"
-dng = "1.5.0"
-
+poll-promise = "0.2.0"
+egui_extras = { version = "0.22.0", features = ["image"] }
