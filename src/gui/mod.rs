@@ -1,5 +1,6 @@
 //! This is where we'll do all the GUI stuff.
 //!
+use eframe::Frame;
 use egui::*;
 use egui_extras::RetainedImage;
 
@@ -16,6 +17,13 @@ pub struct MruApp {
     allowed_to_close: bool,
     #[cfg(not(debug_assertions))] // Let's assume developers can quit when they want to.
     show_confirmation_dialog: bool,
+    // stylised_frame: Frame,
+    // /// Send messages to the backend.
+    // tx_2_backend: Sender<BackendInstruction>,
+    // /// Receive messages from the backend.
+    // rx_from_backend: Receiver<BackendInstruction>,
+    // // A place to store temporary data (so we can avoid downloading/re-downloading stuff, preserve app history etc.)
+    // tmp_dir: PathBuf,
 }
 
 impl Default for MruApp {

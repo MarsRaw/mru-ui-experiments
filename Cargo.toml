@@ -8,8 +8,8 @@ egui = "0.22.0"
 eframe = "0.22.0"
 log = { version = "0.4", features = ["std"] }
 env_logger = "0.10.0"
-mars_raw_utils = { path = "mars-raw-utils" }
-sciimg = { path = "mars-raw-utils/sciimg", features = ["rayon"] }
+mars_raw_utils = { path = "./mars-raw-utils" }
+sciimg = { path = "./mars-raw-utils/sciimg", features = ["rayon"] }
 image = { version = "0.24", features = ["jpeg", "png"] }
 anyhow = "1.0.65"
 bytes = "1.2.1"
@@ -17,3 +17,5 @@ thiserror = "1.0.37"
 tempfile = "3.5.0"
 poll-promise = "0.2.0"
 egui_extras = { version = "0.22.0", features = ["image"] }
+linkk = "0.1.2"
+crossbeam = { version = "0.8.2", features = ["crossbeam-channel"] }
